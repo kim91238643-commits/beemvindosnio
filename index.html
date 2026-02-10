@@ -1,1 +1,555 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blufibra - Provedor de Internet de Alta Velocidade</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- Fonte Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- CSS Personalizado -->
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #6f42c1;
+            --dark-color: #1a1a2e;
+            --light-color: #f8f9fa;
+            --accent-color: #00b4d8;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .card {
+            border: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 10px 25px;
+            font-weight: 600;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+            border-color: #0a58ca;
+        }
+        
+        .contact-info {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+        }
+        
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        .logo-img {
+            max-height: 50px;
+        }
+        
+        .speed-badge {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        
+        .plan-card .card-header {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 700;
+        }
+        
+        .plan-card.featured {
+            border: 2px solid var(--accent-color);
+        }
+        
+        .plan-card.featured .card-header {
+            background-color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="bi bi-wifi text-primary me-2"></i>
+                <span class="text-primary">Blue</span><span class="text-secondary">Fibra</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#plans">Planos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Internet Fibra Óptica de Alta Velocidade</h1>
+                    <p class="lead mb-4">Conecte-se ao futuro com a melhor internet de Blumenau e região. Velocidade, estabilidade e atendimento de qualidade para sua casa ou empresa.</p>
+                    <div class="mb-4">
+                        <span class="speed-badge me-3"><i class="bi bi-lightning-charge-fill me-1"></i> Até 1 Gbps</span>
+                        <span class="speed-badge"><i class="bi bi-shield-check me-1"></i> Conectividade 99.9%</span>
+                    </div>
+                    <a href="#plans" class="btn btn-light btn-lg me-3">Ver Planos</a>
+                    <a href="#contact" class="btn btn-outline-light btn-lg">Falar com Especialista</a>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="https://cdn.pixabay.com/photo/2018/05/17/01/10/internet-3407717_1280.jpg" class="img-fluid rounded shadow" alt="Internet de alta velocidade">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col">
+                    <h2 class="section-title d-inline-block">Por que escolher a Blufibra?</h2>
+                    <p class="text-muted">Oferecemos o melhor serviço de internet da região com diferenciais exclusivos</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100 text-center p-4">
+                        <div class="feature-icon">
+                            <i class="bi bi-speedometer2"></i>
+                        </div>
+                        <h5>Alta Velocidade</h5>
+                        <p>Internet fibra óptica com velocidades de até 1 Gbps para downloads e uploads.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100 text-center p-4">
+                        <div class="feature-icon">
+                            <i class="bi bi-clock-history"></i>
+                        </div>
+                        <h5>Estabilidade</h5>
+                        <p>Conexão 99.9% estável, ideal para home office, jogos online e streaming.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100 text-center p-4">
+                        <div class="feature-icon">
+                            <i class="bi bi-headset"></i>
+                        </div>
+                        <h5>Suporte 24/7</h5>
+                        <p>Atendimento técnico especializado disponível 24 horas por dia, 7 dias por semana.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100 text-center p-4">
+                        <div class="feature-icon">
+                            <i class="bi bi-currency-dollar"></i>
+                        </div>
+                        <h5>Melhor Custo-Benefício</h5>
+                        <p>Planos acessíveis com a melhor relação custo-benefício do mercado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="section-title">Sobre a Blufibra</h2>
+                    <p>A <strong>Blufibra Telecomunicações e Tecnologias LTDA</strong> atua no mercado desde 2019, fornecendo serviços de internet de alta qualidade para residências e empresas em Blumenau e região.</p>
+                    <p>Com infraestrutura própria de fibra óptica, garantimos a melhor experiência de conexão para nossos clientes, seja para trabalho, estudos ou entretenimento.</p>
+                    <p>Nossa missão é conectar pessoas e negócios através de tecnologia de ponta, com confiabilidade e um atendimento humanizado.</p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Fibra óptica 100% dedicada</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Ativação rápida</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Sem fidelidade obrigatória</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Instalação gratuita</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Wi-Fi de alta performance</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Suporte técnico especializado</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <h3 class="mb-4">Informações da Empresa</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <strong><i class="bi bi-building me-2"></i>Razão Social:</strong><br>
+                                Blufibra Telecomunicacoes e Tecnologias LTDA
+                            </li>
+                            <li class="mb-3">
+                                <strong><i class="bi bi-shop me-2"></i>Nome Fantasia:</strong><br>
+                                Blufibra
+                            </li>
+                            <li class="mb-3">
+                                <strong><i class="bi bi-file-text me-2"></i>CNPJ:</strong><br>
+                                34.000.150/0001-17
+                            </li>
+                            <li class="mb-3">
+                                <strong><i class="bi bi-calendar-event me-2"></i>Data Situação Cadastral:</strong><br>
+                                24/06/2019
+                            </li>
+                            <li class="mb-3">
+                                <strong><i class="bi bi-geo-alt me-2"></i>Endereço:</strong><br>
+                                Rua Martin Luther King, 15 - Velha Central<br>
+                                Blumenau - SC<br>
+                                CEP: 89045-420
+                            </li>
+                            <li>
+                                <strong><i class="bi bi-telephone me-2"></i>Telefone:</strong><br>
+                                <a href="tel:47988194383">(47) 98819-4383</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section id="plans" class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col">
+                    <h2 class="section-title d-inline-block">Nossos Planos de Internet</h2>
+                    <p class="text-muted">Escolha o plano ideal para suas necessidades</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Plano Básico -->
+                <div class="col-md-4 mb-4">
+                    <div class="card plan-card h-100">
+                        <div class="card-header text-center py-4">
+                            <h4 class="mb-0">Plano Básico</h4>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h3 class="card-title pricing-card-title">150 Mbps</h3>
+                            <p class="text-muted">Ideal para uso pessoal e redes sociais</p>
+                            <div class="my-4">
+                                <span class="display-5 fw-bold">R$ 89,90</span>
+                                <span class="text-muted">/mês</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Download: 150 Mbps</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Upload: 75 Mbps</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Wi-Fi Dual Band</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Instalação gratuita</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Suporte 24/7</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary w-100">Contratar Agora</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Plano Intermediário -->
+                <div class="col-md-4 mb-4">
+                    <div class="card plan-card featured h-100">
+                        <div class="card-header text-center py-4">
+                            <h4 class="mb-0">Plano Intermediário</h4>
+                            <span class="badge bg-light text-dark mt-2">Mais Popular</span>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h3 class="card-title pricing-card-title">300 Mbps</h3>
+                            <p class="text-muted">Perfeito para família e home office</p>
+                            <div class="my-4">
+                                <span class="display-5 fw-bold">R$ 119,90</span>
+                                <span class="text-muted">/mês</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Download: 300 Mbps</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Upload: 150 Mbps</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Wi-Fi Dual Band</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Instalação gratuita</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Suporte prioritário 24/7</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Router gaming otimizado</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary w-100">Contratar Agora</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Plano Avançado -->
+                <div class="col-md-4 mb-4">
+                    <div class="card plan-card h-100">
+                        <div class="card-header text-center py-4">
+                            <h4 class="mb-0">Plano Avançado</h4>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h3 class="card-title pricing-card-title">1 Gbps</h3>
+                            <p class="text-muted">Para gamers e empresas</p>
+                            <div class="my-4">
+                                <span class="display-5 fw-bold">R$ 199,90</span>
+                                <span class="text-muted">/mês</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Download: 1 Gbps</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Upload: 500 Mbps</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Wi-Fi Mesh</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Instalação gratuita</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Suporte dedicado 24/7</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>IP fixo incluso</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary w-100">Contratar Agora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col">
+                    <h2 class="section-title d-inline-block">Entre em Contato</h2>
+                    <p class="text-muted">Solicite um orçamento ou tire suas dúvidas</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 text-center p-4">
+                                <div class="feature-icon">
+                                    <i class="bi bi-whatsapp"></i>
+                                </div>
+                                <h5>WhatsApp</h5>
+                                <p>Atendimento rápido via WhatsApp</p>
+                                <a href="https://wa.me/5547988194383" class="btn btn-success mt-3" target="_blank">
+                                    <i class="bi bi-whatsapp me-2"></i> Chamar no WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 text-center p-4">
+                                <div class="feature-icon">
+                                    <i class="bi bi-telephone"></i>
+                                </div>
+                                <h5>Telefone</h5>
+                                <p>Ligue para nossa central</p>
+                                <a href="tel:47988194383" class="btn btn-primary mt-3">
+                                    <i class="bi bi-telephone me-2"></i> (47) 98819-4383
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card mt-4 p-4">
+                        <h4 class="text-center mb-4">Solicite uma visita técnica</h4>
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">Nome completo</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Telefone</label>
+                                    <input type="tel" class="form-control" id="phone" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Endereço para instalação</label>
+                                <input type="text" class="form-control" id="address" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="plan" class="form-label">Plano de interesse</label>
+                                <select class="form-select" id="plan" required>
+                                    <option value="" selected disabled>Selecione um plano</option>
+                                    <option value="150">Plano Básico - 150 Mbps</option>
+                                    <option value="300">Plano Intermediário - 300 Mbps</option>
+                                    <option value="1000">Plano Avançado - 1 Gbps</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Mensagem adicional</label>
+                                <textarea class="form-control" id="message" rows="3"></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Enviar Solicitação</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h4 class="mb-4">
+                        <i class="bi bi-wifi me-2"></i>
+                        <span class="text-primary">Blue</span><span class="text-light">Fibra</span>
+                    </h4>
+                    <p>Internet de alta velocidade com fibra óptica dedicada para residências e empresas em Blumenau e região.</p>
+                    <div class="mt-4">
+                        <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-4">Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-light text-decoration-none">Início</a></li>
+                        <li class="mb-2"><a href="#about" class="text-light text-decoration-none">Sobre</a></li>
+                        <li class="mb-2"><a href="#plans" class="text-light text-decoration-none">Planos</a></li>
+                        <li><a href="#contact" class="text-light text-decoration-none">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-4">Contato</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="bi bi-geo-alt me-2"></i>
+                            Rua Martin Luther King, 15 - Velha Central, Blumenau - SC
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-telephone me-2"></i>
+                            <a href="tel:47988194383" class="text-light text-decoration-none">(47) 98819-4383</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-whatsapp me-2"></i>
+                            <a href="https://wa.me/5547988194383" class="text-light text-decoration-none">WhatsApp</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">Blufibra Telecomunicacoes e Tecnologias LTDA - CNPJ: 34.000.150/0001-17</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">&copy; 2023 Blufibra. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Script Personalizado -->
+    <script>
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Aqui normalmente enviaríamos os dados para um servidor
+            // Mas para demonstração, vamos apenas mostrar uma mensagem
+            alert('Solicitação enviada com sucesso! Em breve entraremos em contato.');
+            this.reset();
+        });
+        
+        // Smooth scroll para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
